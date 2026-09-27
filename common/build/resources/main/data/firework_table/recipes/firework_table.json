@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["GG", "PP", "PP"],
-  "key": {
-    "G": { "item": "minecraft:gunpowder" },
-    "P": { "tag": "minecraft:planks" }
-  },
-  "result": { "item": "firework_table:firework_table", "count": 1 }
-}

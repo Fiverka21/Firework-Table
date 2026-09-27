@@ -10,6 +10,33 @@ java {
 
 minecraft {
     mappings channel: 'official', version: rootProject.minecraft_version
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                firework_table {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                firework_table {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
 }
 
 sourceSets.main.java.srcDir project(':common').file('src/main/java')
@@ -21,7 +48,7 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
-    implementation "dev.architectury:architectury-forge:${rootProject.architectury_api_version}"
+    implementation fg.deobf("dev.architectury:architectury-forge:${rootProject.architectury_api_version}")
 }
 
 processResources {

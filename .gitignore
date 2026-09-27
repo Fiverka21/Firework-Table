@@ -31,4 +31,5 @@ bin/
 .DS_Store
 /build/
 /.gradle/
-/run/
+**/build/
+**/run/
