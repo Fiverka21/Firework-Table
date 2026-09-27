@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "firework_table",
+  "version": "${version}",
+  "name": "Firework Table",
+  "description": "Adds a utility block to simplify crafting firework stars.",
+  "authors": ["Sir Squidly"],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.sirsquidly.firework_table.fabric.FireworkTableFabric"],
+    "client": ["com.sirsquidly.firework_table.fabric.FireworkTableFabricClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.20.1",
+    "fabric-api": "*",
+    "architectury": ">=9.0.0"
+  }
+}
