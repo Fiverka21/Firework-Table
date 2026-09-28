@@ -4,11 +4,11 @@
 [Architectury Transformer DEBUG] ============================
 [Architectury Transformer DEBUG] 
 [Architectury Transformer DEBUG] Transforming 5 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapMixinVariables@270f0dcd
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@7433aeb9
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@7e73143e
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapMixinVariables@5d0a166b
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@1b460bd6
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@5b4bdd1d
 [Architectury Transformer DEBUG]  - AddRefmapName(enabled=() -> kotlin.Boolean)
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@acb4931
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@205c115b
 [Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkTab with maxs=true frames=true
@@ -22,29 +22,30 @@
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModBlocks with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModMenus with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModItems with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen$IconButton with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableClient with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/config/Config with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/block/FireworkTableBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/FireworkTable with maxs=true frames=true
 [Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar
-[Architectury Transformer] Transformed jar with 5 transformer(s) in 50.94 ms
+[Architectury Transformer] Transformed jar with 5 transformer(s) in 60.80 ms
 [Architectury Transformer DEBUG] 
 [Architectury Transformer DEBUG] ============================
 [Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar
 [Architectury Transformer DEBUG] ============================
 [Architectury Transformer DEBUG] 
 [Architectury Transformer DEBUG] Transforming 7 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@2febbc76
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@70079625
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@2d8f4807
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@4177a894
 [Architectury Transformer DEBUG]  - AddRefmapName(enabled=() -> kotlin.Boolean)
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@692f021f
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@2b52b263
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@75a5a1fb
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@67d446ca
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@7047fa4a
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@46c23c42
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@11da8bed
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@6d15a24a
 [Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar with 7 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda$3364/0x00007fddccf4a1d8@4443f397
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda$3298/0x00007f5f88f68880@58474e93
 [Architectury Transformer DEBUG] Provided 59 classpath jar(s):
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-injectables/1.0.10/62db2a366d662606d1b23ad02ccc3212ed37ec3/architectury-injectables-1.0.10.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.19.5/ff9e65cffca4a67f31523e1807fe0855940fcbfa/fabric-loader-0.19.5.jar
@@ -105,44 +106,45 @@
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.1/f48d81adce2abf5ad3cfe463df517952749e03bc/slf4j-api-2.0.1.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/Projects/Firework-Table/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-3760f957dc/1.20.1-loom.mappings.1_20_1.layered+hash.40359-v2/minecraft-merged-3760f957dc-1.20.1-loom.mappings.1_20_1.layered+hash.40359-v2.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/Projects/Firework-Table/.gradle/loom-cache/remapped_mods/loom_mappings_1_20_1_layered_hash_40359_v2/dev/architectury/architectury/9.2.14/architectury-9.2.14.jar
-[Architectury Transformer] Read classpath in 1.038 s
+[Architectury Transformer] Read classpath in 1.006 s
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
 [Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/FireworkTable with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkShape with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$2 with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$5 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkTab with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$4 with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkShape with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$5 with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$3 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$1 with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$2 with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$3 with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModItems with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModMenus with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModBlocks with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModItems with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen$IconButton with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableClient with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/config/Config with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/block/FireworkTableBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Injecting MixinConfigs into /META-INF/MANIFEST.MF
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: firework_table-common-common-refmap.json
 [Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar
-[Architectury Transformer] Transformed jar with 7 transformer(s) in 1.491 s
+[Architectury Transformer] Transformed jar with 7 transformer(s) in 1.456 s
 [Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0.jar
 [Architectury Transformer DEBUG] 
 [Architectury Transformer DEBUG] ============================
-[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar
+[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionFabric.jar
 [Architectury Transformer DEBUG] ============================
 [Architectury Transformer DEBUG] 
-[Architectury Transformer DEBUG] Transforming 5 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapMixinVariables@11348449
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@6937d43e
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@2a4213cb
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionFabric.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapMixinVariables@24830cbf
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@177de052
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@7eb55aef
 [Architectury Transformer DEBUG]  - AddRefmapName(enabled=() -> kotlin.Boolean)
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@2e0a1049
-[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@66c8f64
+[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionFabric.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkTab with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$4 with maxs=true frames=true
@@ -155,29 +157,30 @@
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModBlocks with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModMenus with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModItems with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen$IconButton with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableClient with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/config/Config with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/block/FireworkTableBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/FireworkTable with maxs=true frames=true
-[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionFabric.jar
-[Architectury Transformer] Transformed jar with 5 transformer(s) in 27.40 ms
+[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionFabric.jar
+[Architectury Transformer] Transformed jar with 5 transformer(s) in 20.52 ms
 [Architectury Transformer DEBUG] 
 [Architectury Transformer DEBUG] ============================
-[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar
+[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionForge.jar
 [Architectury Transformer DEBUG] ============================
 [Architectury Transformer DEBUG] 
-[Architectury Transformer DEBUG] Transforming 7 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@6cb8559
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@4dccbf40
+[Architectury Transformer DEBUG] Transforming 7 transformer(s) from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionForge.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@519d0745
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@518ebdc4
 [Architectury Transformer DEBUG]  - AddRefmapName(enabled=() -> kotlin.Boolean)
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@12342442
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@38791a4f
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@6242b154
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@4a5c24e3
-[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar with 7 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@2f968870
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@17afedbc
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@2e316723
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@a759fbc
+[Architectury Transformer DEBUG] Transforming from /home/fiverka/Projects/Firework-Table/common/build/devlibs/firework_table-common-1.0-dev.jar to /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionForge.jar with 7 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda$3364/0x00007fddccf4a1d8@4443f397
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda$3298/0x00007f5f88f68880@58474e93
 [Architectury Transformer DEBUG] Provided 59 classpath jar(s):
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-injectables/1.0.10/62db2a366d662606d1b23ad02ccc3212ed37ec3/architectury-injectables-1.0.10.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.19.5/ff9e65cffca4a67f31523e1807fe0855940fcbfa/fabric-loader-0.19.5.jar
@@ -238,7 +241,7 @@
 [Architectury Transformer DEBUG]  - /home/fiverka/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.1/f48d81adce2abf5ad3cfe463df517952749e03bc/slf4j-api-2.0.1.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/Projects/Firework-Table/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-3760f957dc/1.20.1-loom.mappings.1_20_1.layered+hash.40359-v2/minecraft-merged-3760f957dc-1.20.1-loom.mappings.1_20_1.layered+hash.40359-v2.jar
 [Architectury Transformer DEBUG]  - /home/fiverka/Projects/Firework-Table/.gradle/loom-cache/remapped_mods/loom_mappings_1_20_1_layered_hash_40359_v2/dev/architectury/architectury/9.2.14/architectury-9.2.14.jar
-[Architectury Transformer] Read classpath in 1.018 s
+[Architectury Transformer] Read classpath in 973.9 ms
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
 [Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
@@ -247,20 +250,21 @@
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkTab with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$4 with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$5 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$2 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$1 with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$5 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$3 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/menu/FireworkTableMenu$FireworkShape with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModMenus with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModBlocks with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/registry/ModItems with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableScreen$IconButton with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/client/FireworkTableClient with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/config/Config with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/sirsquidly/firework_table/block/FireworkTableBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Injecting MixinConfigs into /META-INF/MANIFEST.MF
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: firework_table-common-common-refmap.json
-[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0-transformProductionForge.jar
-[Architectury Transformer] Transformed jar with 7 transformer(s) in 1.226 s
-[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.0.jar
+[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0-transformProductionForge.jar
+[Architectury Transformer] Transformed jar with 7 transformer(s) in 1.225 s
+[Architectury Transformer DEBUG] Closed File Systems for /home/fiverka/Projects/Firework-Table/common/build/libs/firework_table-common-1.0.jar
