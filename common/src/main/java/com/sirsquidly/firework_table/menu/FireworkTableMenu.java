@@ -3,7 +3,7 @@ package com.sirsquidly.firework_table.menu;
 import com.sirsquidly.firework_table.config.Config;
 import com.sirsquidly.firework_table.registry.ModMenus;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -17,6 +17,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.FireworkExplosion;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.level.Level;
 
 public final class FireworkTableMenu extends AbstractContainerMenu {
@@ -87,13 +89,13 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
         int[] colors = collectColors(1, 8), fades = collectColors(9, 16);
         if (colors.length == 0 || hasLockedItems()) { result.setItem(0, ItemStack.EMPTY); return; }
         ItemStack output = new ItemStack(Items.FIREWORK_STAR);
-        CompoundTag explosion = new CompoundTag();
-        explosion.putByte("Type", (byte) data.get(1));
-        explosion.putIntArray("Colors", colors);
-        if (fades.length > 0) explosion.putIntArray("FadeColors", fades);
-        explosion.putBoolean("Flicker", flickEnabled());
-        explosion.putBoolean("Trail", trailEnabled());
-        CompoundTag root = new CompoundTag(); root.put("Explosion", explosion); output.setTag(root);
+        FireworkExplosion explosion = new FireworkExplosion(
+                FireworkExplosion.Shape.byId(data.get(1)),
+                new IntArrayList(colors),
+                new IntArrayList(fades),
+                trailEnabled(),
+                flickEnabled());
+        output.set(DataComponents.FIREWORK_EXPLOSION, explosion);
         result.setItem(0, output);
     }
     private boolean hasLockedItems() { for (int i = 1; i <= 8; i++) if (isDyeSlotDisabled(i - 1) && !input.getItem(i).isEmpty()) return true; return false; }

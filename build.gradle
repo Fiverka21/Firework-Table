@@ -1,32 +1,31 @@
 plugins {
     id 'architectury-plugin' version '3.4.+'
-    id 'dev.architectury.loom' version '1.6.+' apply false
+    id 'dev.architectury.loom' version '1.7.+' apply false
 }
 
 architectury { minecraft = minecraft_version }
 
 subprojects {
-    if (project.name != 'forge') apply plugin: 'dev.architectury.loom'
+    apply plugin: 'dev.architectury.loom'
 
-    if (project.name != 'forge') base { archivesName = "${rootProject.archives_base_name}-${project.name}" }
+    if (project.name != 'common') base { archivesName = "${rootProject.archives_base_name}-${project.name}" }
 
     repositories {
         maven { url = 'https://maven.architectury.dev/' }
         maven { url = 'https://maven.fabricmc.net/' }
         maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://maven.neoforged.net/releases/' }
     }
 
-    if (project.name != 'forge') {
-        loom { silentMojangMappingsLicense() }
-        dependencies {
-            minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-            mappings loom.officialMojangMappings()
-        }
-        java {
-            sourceCompatibility = JavaVersion.VERSION_17
-            targetCompatibility = JavaVersion.VERSION_17
-            withSourcesJar()
-        }
+    loom { silentMojangMappingsLicense() }
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.officialMojangMappings()
+    }
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+        withSourcesJar()
     }
 
     tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

@@ -5,16 +5,17 @@ import com.sirsquidly.firework_table.menu.FireworkTableMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.FireworkExplosion;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class FireworkTableScreen extends AbstractContainerScreen<FireworkTableMenu> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(FireworkTable.MOD_ID, "textures/gui/firework_table.png");
-    private static final ResourceLocation ICONS = new ResourceLocation(FireworkTable.MOD_ID, "textures/gui/firework_table_icons.png");
-    private static final ResourceLocation PREVIEW = new ResourceLocation(FireworkTable.MOD_ID, "textures/gui/firework_table_preview.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(FireworkTable.MOD_ID, "textures/gui/firework_table.png");
+    private static final ResourceLocation ICONS = ResourceLocation.fromNamespaceAndPath(FireworkTable.MOD_ID, "textures/gui/firework_table_icons.png");
+    private static final ResourceLocation PREVIEW = ResourceLocation.fromNamespaceAndPath(FireworkTable.MOD_ID, "textures/gui/firework_table_preview.png");
 
     private final IconButton[] explosionButtons = new IconButton[7];
 
@@ -70,14 +71,11 @@ public final class FireworkTableScreen extends AbstractContainerScreen<FireworkT
 
     private void renderPreview(GuiGraphics graphics) {
         ItemStack stack = menu.result.getItem(0);
-        CompoundTag tag = stack.getTag();
-        if (tag == null || !tag.contains("Explosion")) return;
-        CompoundTag explosion = tag.getCompound("Explosion");
-        int[] colors = explosion.getIntArray("Colors");
-        if (colors.length == 0) return;
-        int shape = Math.max(0, Math.min(4, explosion.getByte("Type")));
+        FireworkExplosion explosion = stack.get(DataComponents.FIREWORK_EXPLOSION);
+        if (explosion == null || explosion.colors().isEmpty()) return;
+        int shape = Math.max(0, Math.min(4, explosion.shape().getId()));
         for (int i = 0; i < 8; i++) {
-            int color = colors[i % colors.length];
+            int color = explosion.colors().getInt(i % explosion.colors().size());
             graphics.setColor(((color >> 16) & 255) / 255f, ((color >> 8) & 255) / 255f, (color & 255) / 255f, 1.0f);
             graphics.blit(PREVIEW, leftPos + 130, topPos + 18, i * 40, shape * 40, 40, 40, 512, 512);
         }

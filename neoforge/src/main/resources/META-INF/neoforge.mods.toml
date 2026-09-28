@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[4,)"
 license="All Rights Reserved"
 [[mods]]
 modId="firework_table"
@@ -8,14 +8,14 @@ displayName="Firework Table"
 authors="Sir Squidly"
 description='''Adds a utility block to simplify crafting firework stars.'''
 [[dependencies.firework_table]]
-modId="forge"
-mandatory=true
-versionRange="[47,)"
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.firework_table]]
 modId="minecraft"
-mandatory=true
-versionRange="[1.20.1]"
+type="required"
+versionRange="[1.21.1]"
 ordering="NONE"
 side="BOTH"
