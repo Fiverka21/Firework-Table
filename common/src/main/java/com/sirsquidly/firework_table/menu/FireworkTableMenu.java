@@ -23,7 +23,7 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
     public enum FireworkTab { DYES, EXPLOSION }
     public enum FireworkShape { SMALL, LARGE, STAR, CREEPER, BURST }
 
-    public final SimpleContainer input = new SimpleContainer(18) { @Override public void setChanged() { super.setChanged(); FireworkTableMenu.this.slotsChanged(this); } };
+    public final SimpleContainer input = new SimpleContainer(17) { @Override public void setChanged() { super.setChanged(); FireworkTableMenu.this.slotsChanged(this); } };
     public final SimpleContainer result = new SimpleContainer(1);
     private final ContainerLevelAccess access;
     private final ContainerData data = new ContainerData() {
@@ -48,7 +48,7 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
         addSlot(new Slot(result, 0, 142, 67) {
             @Override public boolean mayPlace(ItemStack stack) { return false; }
             @Override public ItemStack remove(int amount) { return super.remove(amount); }
-            @Override public void onTake(Player player, ItemStack stack) { input.removeItem(0, 1); for (int i = 1; i < 18; i++) input.removeItem(i, 1); super.onTake(player, stack); }
+            @Override public void onTake(Player player, ItemStack stack) { consumeInputs(); super.onTake(player, stack); }
         });
         addPlayerInventory(playerInventory);
         updateOutput();
@@ -57,6 +57,7 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
     private void addDyeSlot(int index, int x, int y) {
         addSlot(new Slot(input, index + 1, x, y) {
             @Override public boolean mayPlace(ItemStack stack) { return stack.getItem() instanceof DyeItem && !isDyeSlotDisabled(index); }
+            @Override public boolean isActive() { return currentTab() == FireworkTab.DYES; }
         });
     }
 
@@ -82,6 +83,10 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
     }
 
     @Override public void slotsChanged(Container container) { super.slotsChanged(container); updateOutput(); }
+    private void consumeInputs() {
+        for (int i = 0; i < 17; i++) input.removeItem(i, 1);
+    }
+
     private void updateOutput() {
         if (!input.getItem(0).is(Items.GUNPOWDER)) { result.setItem(0, ItemStack.EMPTY); return; }
         int[] colors = collectColors(1, 8), fades = collectColors(9, 16);
@@ -104,8 +109,18 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
     @Override public ItemStack quickMoveStack(Player player, int index) {
         Slot slot = slots.get(index); if (!slot.hasItem()) return ItemStack.EMPTY;
         ItemStack copy = slot.getItem().copy();
-        if (index == 18) return ItemStack.EMPTY;
-        if (index < 18) { if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) return ItemStack.EMPTY; }
+        if (index == 17) {
+            boolean crafted = false;
+            while (slot.hasItem()) {
+                if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) break;
+                consumeInputs();
+                crafted = true;
+                slot.setChanged();
+            }
+            if (!crafted) return ItemStack.EMPTY;
+            return copy;
+        }
+        if (index < 17) { if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) return ItemStack.EMPTY; }
         else if (!moveItemStackTo(slot.getItem(), 0, 17, false)) return ItemStack.EMPTY;
         if (slot.getItem().isEmpty()) slot.set(ItemStack.EMPTY); else slot.setChanged();
         return copy;

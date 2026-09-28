@@ -87,7 +87,6 @@ public final class FireworkTableScreen extends AbstractContainerScreen<FireworkT
     @Override
     protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
         graphics.drawString(font, title, (imageWidth - font.width(title)) / 2, 4, 0x404040, false);
-        graphics.drawString(font, playerInventoryTitle, 8, imageHeight - 94, 0x404040, false);
     }
 
     private final class IconButton extends Button {
