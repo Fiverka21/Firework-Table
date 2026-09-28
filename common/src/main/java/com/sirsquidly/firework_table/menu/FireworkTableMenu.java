@@ -58,7 +58,12 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
 
     private void addDyeSlot(int index, int x, int y) {
         addSlot(new Slot(input, index + 1, x, y) {
-            @Override public boolean mayPlace(ItemStack stack) { return stack.getItem() instanceof DyeItem && !isDyeSlotDisabled(index); }
+            @Override public boolean mayPlace(ItemStack stack) {
+                return currentTab() == FireworkTab.DYES
+                        && stack.getItem() instanceof DyeItem
+                        && !isDyeSlotDisabled(index);
+            }
+            @Override public boolean isActive() { return currentTab() == FireworkTab.DYES; }
         });
     }
 
@@ -106,9 +111,12 @@ public final class FireworkTableMenu extends AbstractContainerMenu {
     @Override public ItemStack quickMoveStack(Player player, int index) {
         Slot slot = slots.get(index); if (!slot.hasItem()) return ItemStack.EMPTY;
         ItemStack copy = slot.getItem().copy();
-        if (index == 18) return ItemStack.EMPTY;
-        if (index < 18) { if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) return ItemStack.EMPTY; }
-        else if (!moveItemStackTo(slot.getItem(), 0, 17, false)) return ItemStack.EMPTY;
+        if (index == 17) {
+            if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) return ItemStack.EMPTY;
+            slot.onTake(player, copy);
+        } else if (index < 17) {
+            if (!moveItemStackTo(slot.getItem(), 18, slots.size(), true)) return ItemStack.EMPTY;
+        } else if (!moveItemStackTo(slot.getItem(), 0, 17, false)) return ItemStack.EMPTY;
         if (slot.getItem().isEmpty()) slot.set(ItemStack.EMPTY); else slot.setChanged();
         return copy;
     }
