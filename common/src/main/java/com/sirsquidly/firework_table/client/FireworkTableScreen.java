@@ -112,11 +112,11 @@ public final class FireworkTableScreen extends AbstractContainerScreen<FireworkT
                     || id == 101 && menu.flickEnabled()
                     || id == 102 && menu.trailEnabled();
             int stateOffset = selected ? 32 : isHovered ? 16 : 0;
-            int backgroundU = shapeOrEffect ? 176 : 238;
+            int backgroundU = shapeOrEffect ? 176 + stateOffset : 238;
             int backgroundV = shapeOrEffect ? 1 : 64;
-            graphics.blit(ICONS, getX(), getY(), backgroundU, backgroundV + stateOffset, width, height, 256, 256);
-            int offset = selected ? -2 : 0;
-            graphics.blit(ICONS, getX() + offset, getY() + (shapeOrEffect ? 0 : -1), iconU, iconV, 16, 16, 256, 256);
+            graphics.blit(ICONS, getX(), getY(), backgroundU,
+                    backgroundV + (shapeOrEffect ? 0 : stateOffset), width, height, 256, 256);
+            graphics.blit(ICONS, getX(), getY() + (shapeOrEffect ? 0 : -1), iconU, iconV, 16, 16, 256, 256);
         }
     }
 
